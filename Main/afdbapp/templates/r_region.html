@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<title>AfDB's operation impacts</title>
+
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white" id="container">
+<div class="w3-display-topleft w3-padding-large w3-xlarge">
+    <button class="w3-button w3-round" style="color:green;" onclick="window.location.href='{{ url_for('mainpage') }}'">HOME</button> </p>
+ </div>
+  <div class="w3-display-middle" style="color:black;" size=6>
+ <hr color="blue">
+ <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-kiyi{font-weight:bold;border-color:inherit;text-align:left}
+.tg .tg-zv4m{border-color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-266k{background-color:#9b9b9b;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-xldj{border-color:inherit;text-align:left}
+.tg .tg-pu0z{font-weight:bold;background-color:#9b9b9b;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg" align='center'>
+<caption style="caption-side: left;"> <font size=6 color="#ff0000" face="Verdana">Summary of funding sharing</font></caption>
+  <tr>
+    <th class="tg-kiyi">Sectors</th>
+    <th class="tg-kiyi">Total amount (m UA)</th>
+    <th class="tg-kiyi">Share (%)</th>
+    <th class="tg-0pky" rowspan="7"></th>
+    <th class="tg-fymr"><span style="font-weight:700">Regional Departments</span></th>
+    <th class="tg-0pky"><span style="font-weight:700">Total amount (m UA)</span></th>
+    <th class="tg-fymr">Share (%)</th>
+    <th class="tg-0pky" rowspan="4"></th>
+    <th class="tg-fymr">Country types</th>
+    <th class="tg-fymr">Total amount (m UA)</th>
+    <th class="tg-fymr">Share (%)</th>
+  </tr>
+  <tr>
+    <td class="tg-kiyi">Agriculture</td>
+    <td class="tg-xldj">{{'{0:,}'.format(list_f[2]+list_g[2]+list_i[2]+list_j[2]+list_k[2])}}</td>
+    <td class="tg-xldj">{{'{0:,}'.format((list_f[2]+list_g[2]+list_i[2]+list_j[2]+list_k[2])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-fymr">RDGC</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[23])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[23]/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-fymr">ADF</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[21]+list_g[21]+list_i[21]+list_j[21]+list_k[21])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_f[21]+list_g[21]+list_i[21]+list_j[21]+list_k[21])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[5]+list_g[5]+list_i[5]+list_j[5]+list_k[5])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_f[5]+list_g[5]+list_i[5]+list_j[5]+list_k[5])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-fymr">RDGE</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[23])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[23]/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-fymr">ADB</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[22]+list_g[22]+list_i[22]+list_j[22]+list_k[22])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_f[22]+list_g[22]+list_i[22]+list_j[22]+list_k[22])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[8]+list_g[8]+list_i[8]+list_j[8]+list_k[8])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_f[8]+list_g[8]+list_i[8]+list_j[8]+list_k[8])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-fymr">RDGN</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[23])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[23]/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-266k"><span style="font-weight:700">Total amount (m UA)</span></td>
+    <td class="tg-266k">{{'{0:,}'.format(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format((list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[11]+list_g[11]+list_i[11]+list_j[11]+list_k[11])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_f[11]+list_g[11]+list_i[11]+list_j[11]+list_k[11])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-fymr">RDGS</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[23])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[23]/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-zv4m" colspan="4" rowspan="3"></td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[14]+list_g[14]+list_i[14]+list_j[14]+list_k[14])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_f[14]+list_g[14]+list_i[14]+list_j[14]+list_k[14])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-fymr">RDGW</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[23])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[23]/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[17]+list_g[17]+list_i[17]+list_j[17]+list_k[17])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_f[17]+list_g[17]+list_i[17]+list_j[17]+list_k[17])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-266k"><span style="font-weight:700">Total amount (m UA)</span></td>
+    <td class="tg-266k">{{'{0:,}'.format(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format((list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[20]+list_g[20]+list_i[20]+list_j[20]+list_k[20])}}</</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_f[20]+list_g[20]+list_i[20]+list_j[20]+list_k[20])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-zv4m"></td>
+    <td class="tg-zv4m" colspan="7" rowspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-pu0z"><span style="font-weight:700">Total amount (m UA)</span></td>
+    <td class="tg-266k">{{'{0:,}'.format(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format((list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])/(list_f[23]+list_g[23]+list_i[23]+list_j[23]+list_k[23])*100)}}</td>
+    <td class="tg-zv4m"></td>
+  </tr>
+ <br>
+ <br>
+</table>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-kiyi{font-weight:bold;border-color:inherit;text-align:left}
+.tg .tg-266k{background-color:#9b9b9b;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-xldj{border-color:inherit;text-align:left}
+.tg .tg-pu0z{font-weight:bold;background-color:#9b9b9b;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<caption style="caption-side: left;"> <font size=6 color="#ff0000" face="Verdana">Fund sharing with details</font></caption>		
+  <tr>
+    <th class="tg-kiyi" colspan="4">RGDC = {{'{0:,}'.format(list_amount[0])}} millions UA</th>
+    <th class="tg-0pky" rowspan="10"></th>
+    <th class="tg-fymr" colspan="4">RDGE = {{'{0:,}'.format(list_amount[1])}} millions UA</th>
+    <th class="tg-0pky" rowspan="10"></th>
+    <th class="tg-fymr" colspan="4">RDGN = {{'{0:,}'.format(list_amount[2])}} millions UA</th>
+    <th class="tg-0pky" rowspan="10"></th>
+    <th class="tg-fymr" colspan="4">RDGS = {{'{0:,}'.format(list_amount[3])}} millions UA</th>
+    <th class="tg-0pky" rowspan="10"></th>
+    <th class="tg-fymr" colspan="4">RDGW = {{'{0:,}'.format(list_amount[4])}} millions UA</th>
+  </tr>
+  <tr>
+    <td class="tg-kiyi">Regional Department</td>
+    <td class="tg-kiyi">ADF Countries</td>
+    <td class="tg-kiyi">ADB Countries</td>
+    <td class="tg-fymr">Total (m UA)</td>
+    <td class="tg-fymr">Regional Department</td>
+    <td class="tg-fymr">ADF Countries</td>
+    <td class="tg-fymr">ADB Countries</td>
+    <td class="tg-fymr">Total (m UA)</td>
+    <td class="tg-fymr">Regional Department</td>
+    <td class="tg-fymr">ADF Countries</td>
+    <td class="tg-fymr">ADB Countries</td>
+    <td class="tg-fymr">Total (m UA)</td>
+    <td class="tg-fymr">Regional Department</td>
+    <td class="tg-fymr">ADF Countries</td>
+    <td class="tg-fymr">ADB Countries</td>
+    <td class="tg-fymr">Total (m UA)</td>
+    <td class="tg-fymr">Regional Department</td>
+    <td class="tg-fymr">ADF Countries</td>
+    <td class="tg-fymr">ADB Countries</td>
+    <td class="tg-fymr">Total (m UA)</td>
+  </tr>
+  <tr>
+    <td class="tg-kiyi">Agriculture</td>
+    <td class="tg-xldj">{{'{0:,}'.format(list_f[0])}}</td>
+    <td class="tg-xldj">{{'{0:,}'.format(list_f[1])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[2])}}</td>
+    <td class="tg-fymr">Agriculture</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[0])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[1])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[2])}}</td>
+    <td class="tg-fymr">Agriculture</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[0])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[1])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[2])}}</td>
+    <td class="tg-fymr">Agriculture</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[0])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[1])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[2])}}</td>
+    <td class="tg-fymr">Agriculture</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[0])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[1])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[2])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[3])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[4])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[5])}}</td>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[3])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[4])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[5])}}</td>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[3])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[4])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[5])}}</td>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[3])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[4])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[5])}}</td>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[3])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[4])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[5])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[6])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[7])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[8])}}</td>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[6])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[7])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[8])}}</td>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[6])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[7])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[8])}}</td>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[6])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[7])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[8])}}</td>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[6])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[7])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[8])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[9])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[10])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[11])}}</td>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[9])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[10])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[11])}}</td>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[9])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[10])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[11])}}</td>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[9])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[10])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[11])}}</td>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[9])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[10])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[11])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[12])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[13])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[14])}}</td>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[12])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[13])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[14])}}</td>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[12])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[13])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[14])}}</td>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[12])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[13])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[14])}}</td>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[12])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[13])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[14])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[15])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[16])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[17])}}</td>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[15])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[16])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[17])}}</td>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[15])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[16])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[17])}}</td>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[15])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[16])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[17])}}</td>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[15])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[16])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[17])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[18])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[19])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_f[20])}}</td>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[18])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[19])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_g[20])}}</td>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[18])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[19])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_i[20])}}</td>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[18])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[19])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_j[20])}}</td>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[18])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[19])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_k[20])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-pu0z">Total (m UA)</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_f[21])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_f[22])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_f[23])}}</td>
+    <td class="tg-pu0z">Total (m UA)</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_g[21])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_g[22])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_g[23])}}</td>
+    <td class="tg-pu0z">Total (m UA)</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_i[21])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_i[22])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_i[23])}}</td>
+    <td class="tg-pu0z">Total (m UA)</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_j[21])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_j[22])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_j[23])}}</td>
+    <td class="tg-pu0z">Total (m UA)</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_k[21])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_k[22])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_k[23])}}</td>
+  </tr>
+</table>
+
+ <br>
+ <br>
+ <hr color="blue">
+ <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-kiyi{font-weight:bold;border-color:inherit;text-align:left}
+.tg .tg-zv4m{border-color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-266k{background-color:#9b9b9b;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-xldj{border-color:inherit;text-align:left}
+.tg .tg-pu0z{font-weight:bold;background-color:#9b9b9b;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg" align='center'>
+<caption style="caption-side: left;"> <font size=6 color="#ff0000" face="Verdana">Summary beneficiairies predicted using tensorflow model</font></caption>
+  <tr>
+    <th class="tg-kiyi">Sectors</th>
+    <th class="tg-kiyi">Total </th>
+    <th class="tg-kiyi">Share (%)</th>
+    <th class="tg-0pky" rowspan="7"></th>
+    <th class="tg-fymr"><span style="font-weight:700">Regional Departments</span></th>
+    <th class="tg-0pky"><span style="font-weight:700">Total </span></th>
+    <th class="tg-fymr">Share (%)</th>
+    <th class="tg-0pky" rowspan="4"></th>
+    <th class="tg-fymr">Country types</th>
+    <th class="tg-fymr">Total </th>
+    <th class="tg-fymr">Share (%)</th>
+  </tr>
+  <tr>
+    <td class="tg-kiyi">Agriculture</td>
+    <td class="tg-xldj">{{'{0:,}'.format(list_r_f[2]+list_r_g[2]+list_r_i[2]+list_r_j[2]+list_r_k[2])}}</td>
+    <td class="tg-xldj">{{'{0:,}'.format((list_r_f[2]+list_r_g[2]+list_r_i[2]+list_r_j[2]+list_r_k[2])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-fymr">RDGC</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[23])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[23]/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-fymr">ADF</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[21]+list_r_g[21]+list_r_i[21]+list_r_j[21]+list_r_k[21])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_r_f[21]+list_r_g[21]+list_r_i[21]+list_r_j[21]+list_r_k[21])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[5]+list_r_g[5]+list_r_i[5]+list_r_j[5]+list_r_k[5])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_r_f[5]+list_r_g[5]+list_r_i[5]+list_r_j[5]+list_r_k[5])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-fymr">RDGE</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[23])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[23]/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-fymr">ADB</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[22]+list_r_g[22]+list_r_i[22]+list_r_j[22]+list_r_k[22])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_r_f[22]+list_r_g[22]+list_r_i[22]+list_r_j[22]+list_r_k[22])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[8]+list_r_g[8]+list_r_i[8]+list_r_j[8]+list_r_k[8])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_r_f[8]+list_r_g[8]+list_r_i[8]+list_r_j[8]+list_r_k[8])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-fymr">RDGN</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[23])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[23]/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-266k"><span style="font-weight:700">Total amount </span></td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format((list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[11]+list_r_g[11]+list_r_i[11]+list_r_j[11]+list_r_k[11])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_r_f[11]+list_r_g[11]+list_r_i[11]+list_r_j[11]+list_r_k[11])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-fymr">RDGS</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[23])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[23]/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-zv4m" colspan="4" rowspan="3"></td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[14]+list_r_g[14]+list_r_i[14]+list_r_j[14]+list_r_k[14])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_r_f[14]+list_r_g[14]+list_r_i[14]+list_r_j[14]+list_r_k[14])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-fymr">RDGW</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[23])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[23]/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[17]+list_r_g[17]+list_r_i[17]+list_r_j[17]+list_r_k[17])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_r_f[17]+list_r_g[17]+list_r_i[17]+list_r_j[17]+list_r_k[17])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-266k"><span style="font-weight:700">Total amount </span></td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format((list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[20]+list_r_g[20]+list_r_i[20]+list_r_j[20]+list_r_k[20])}}</</td>
+    <td class="tg-0pky">{{'{0:,}'.format((list_r_f[20]+list_r_g[20]+list_r_i[20]+list_r_j[20]+list_r_k[20])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-zv4m"></td>
+    <td class="tg-zv4m" colspan="7" rowspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-pu0z"><span style="font-weight:700">Total</span>)</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format((list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])/(list_r_f[23]+list_r_g[23]+list_r_i[23]+list_r_j[23]+list_r_k[23])*100)}}</td>
+    <td class="tg-zv4m"></td>
+  </tr>
+ <br>
+ <br>
+</table>
+<br>
+<br>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-kiyi{font-weight:bold;border-color:inherit;text-align:left}
+.tg .tg-266k{background-color:#9b9b9b;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-xldj{border-color:inherit;text-align:left}
+.tg .tg-pu0z{font-weight:bold;background-color:#9b9b9b;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<caption style="caption-side: left;"> <font size=6 color="#ff0000" face="Verdana">Details of beneficiairies predicted using tensorflow model</font></caption>		
+  <tr>
+    <th class="tg-kiyi" colspan="4">RGDC = {{'{0:,}'.format(list_r_f[23])}}</th>
+    <th class="tg-0pky" rowspan="10"></th>
+    <th class="tg-fymr" colspan="4">RDGE = {{'{0:,}'.format(list_r_g[23])}}</th>
+    <th class="tg-0pky" rowspan="10"></th>
+    <th class="tg-fymr" colspan="4">RDGN = {{'{0:,}'.format(list_r_i[23])}}</th>
+    <th class="tg-0pky" rowspan="10"></th>
+    <th class="tg-fymr" colspan="4">RDGS = {{'{0:,}'.format(list_r_j[23])}}</th>
+    <th class="tg-0pky" rowspan="10"></th>
+    <th class="tg-fymr" colspan="4">RDGW = {{'{0:,}'.format(list_r_k[23])}}</th>
+  </tr>
+  <tr>
+    <td class="tg-kiyi">Regional Department</td>
+    <td class="tg-kiyi">ADF Countries</td>
+    <td class="tg-kiyi">ADB Countries</td>
+    <td class="tg-fymr">Total </td>
+    <td class="tg-fymr">Regional Department</td>
+    <td class="tg-fymr">ADF Countries</td>
+    <td class="tg-fymr">ADB Countries</td>
+    <td class="tg-fymr">Total </td>
+    <td class="tg-fymr">Regional Department</td>
+    <td class="tg-fymr">ADF Countries</td>
+    <td class="tg-fymr">ADB Countries</td>
+    <td class="tg-fymr">Total </td>
+    <td class="tg-fymr">Regional Department</td>
+    <td class="tg-fymr">ADF Countries</td>
+    <td class="tg-fymr">ADB Countries</td>
+    <td class="tg-fymr">Total </td>
+    <td class="tg-fymr">Regional Department</td>
+    <td class="tg-fymr">ADF Countries</td>
+    <td class="tg-fymr">ADB Countries</td>
+    <td class="tg-fymr">Total </td>
+  </tr>
+  <tr>
+    <td class="tg-kiyi">Agriculture</td>
+    <td class="tg-xldj">{{'{0:,}'.format(list_r_f[0])}}</td>
+    <td class="tg-xldj">{{'{0:,}'.format(list_r_f[1])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[2])}}</td>
+    <td class="tg-fymr">Agriculture</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[0])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[1])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[2])}}</td>
+    <td class="tg-fymr">Agriculture</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[0])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[1])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[2])}}</td>
+    <td class="tg-fymr">Agriculture</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[0])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[1])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[2])}}</td>
+    <td class="tg-fymr">Agriculture</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[0])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[1])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[2])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[3])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[4])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[5])}}</td>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[3])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[4])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[5])}}</td>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[3])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[4])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[5])}}</td>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[3])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[4])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[5])}}</td>
+    <td class="tg-fymr">Power</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[3])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[4])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[5])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[6])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[7])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[8])}}</td>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[6])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[7])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[8])}}</td>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[6])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[7])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[8])}}</td>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[6])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[7])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[8])}}</td>
+    <td class="tg-fymr">Transport</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[6])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[7])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[8])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[9])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[10])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[11])}}</td>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[9])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[10])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[11])}}</td>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[9])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[10])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[11])}}</td>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[9])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[10])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[11])}}</td>
+    <td class="tg-fymr">Water &amp; Sanitation</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[9])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[10])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[11])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[12])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[13])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[14])}}</td>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[12])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[13])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[14])}}</td>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[12])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[13])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[14])}}</td>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[12])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[13])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[14])}}</td>
+    <td class="tg-fymr">Microfinance</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[12])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[13])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[14])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[15])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[16])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[17])}}</td>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[15])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[16])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[17])}}</td>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[15])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[16])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[17])}}</td>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[15])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[16])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[17])}}</td>
+    <td class="tg-fymr">Education</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[15])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[16])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[17])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[18])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[19])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_f[20])}}</td>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[18])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[19])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_g[20])}}</td>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[18])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[19])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_i[20])}}</td>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[18])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[19])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_j[20])}}</td>
+    <td class="tg-fymr">Health</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[18])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[19])}}</td>
+    <td class="tg-0pky">{{'{0:,}'.format(list_r_k[20])}}</td>
+  </tr>
+  <tr>
+    <td class="tg-pu0z">Total </td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_f[21])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_f[22])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_f[23])}}</td>
+    <td class="tg-pu0z">Total </td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_g[21])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_g[22])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_g[23])}}</td>
+    <td class="tg-pu0z">Total </td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_i[21])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_i[22])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_i[23])}}</td>
+    <td class="tg-pu0z">Total </td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_j[21])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_j[22])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_j[23])}}</td>
+    <td class="tg-pu0z">Total </td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_k[21])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_k[22])}}</td>
+    <td class="tg-266k">{{'{0:,}'.format(list_r_k[23])}}</td>
+  </tr>
+</table>
+  </div>
+</div>
+
+</body>
+</html>

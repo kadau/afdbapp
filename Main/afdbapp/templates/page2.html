@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AfDB's operation impacts</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="{{ url_for('static', filename='background.css') }}">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: img src = 'bg.jpg';
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<div>
+    <button class="favorite styled" onclick="window.location.href='{{ url_for('mainpage') }}'">HOME</button> </p>
+</div>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white" id="container">
+  <div class="w3-display-middle" style="color:black;" size=6>
+	<table border="0" align='center'>
+	<caption style="caption-side: left;"> <font size=4 color="#ff0000" face="Verdana">PROJECT BENEFICIAIRIES ESTIMATION</font></caption>
+	<br>	
+	<tr>
+		<th colspan="3" align="left"><button class="favorite styled" type="button" style="background-color:#0B6121; opacity: 0.6;"> <a href="{{ url_for('global_') }}">Predict impact using Global Comitments</a></button></th>
+	</tr>
+	<tr>
+		<th colspan="3">
+			<p style="text-align:justify;">
+				<font size=1>
+		You define the overall amount allocated to all operations and the system is responsible for splitting by region, 
+		sector and country type
+				</font>
+			</b>
+		</th>
+	</tr>
+	
+	<tr>
+		<th colspan="3" align="left"><button class="favorite styled" type="button" style="background-color:#088A4B; opacity: 0.6;"> <a href="{{ url_for('sector') }}">Predict impact by defining commitments by sector</a></button></th>
+	</tr>
+	<tr>
+		<th colspan="3">
+			<p style="text-align:justify;">
+				<font size=1>
+		You define amount allocated by sector and the system is responsible for splitting by region and country type
+				</font>
+			</b>
+		</th>
+	</tr>
+
+
+	<tr>
+		<th colspan="3" align="left"><button class="favorite styled" type="button" style="background-color:#01DFA5; opacity: 0.6;"> <a href="{{ url_for('region') }}">Predict impact by defining commitments by region</a></button></th>
+	</tr>
+	<tr>
+		<th colspan="3">
+			<p style="text-align:justify;">
+				<font size=1>
+		You define amount allocated by region and the system is responsible for splitting by sector and country type
+				</font>
+			</b>
+		</th>
+	</tr>
+
+
+	<tr>
+		<th colspan="3" align="left"><button class="favorite styled" type="button" style="background-color:#58FAF4; opacity: 0.6;"> <a href="{{ url_for('type') }}">Predict impact by defining commitments by country type</a></button></th>
+	</tr>
+	<tr>
+		<th colspan="3">
+			<p style="text-align:justify;">
+				<font size=1>
+		You define amount allocated by country type and the system is responsible for splitting by sector and region
+				</font>
+			</b>
+		</th>
+	</tr>
+	
+	
+	<tr>
+		<th colspan="3" align="left"><button class="favorite styled" type="button" style="background-color:#CEF6F5; opacity: 0.6;"> <a href="{{ url_for('type_sector') }}">Predict impact by defining commitments by country type and sector</a></button></th>
+	</tr>
+	<tr>
+		<th colspan="3">
+			<p style="text-align:justify;">
+				<font size=1>
+		You define amount allocated for country type by sector and the system is responsible for splitting by region
+				</font>
+			</b>
+		</th>
+	</tr>
+	<tr>
+		<th colspan="3" align="left"><button class="favorite styled" type="button" style="background-color:#CEF6F5; opacity: 0.6;"> <a href="{{ url_for('global_entire') }}">Predict impact using externale excel sheet</a></button></th>
+	</tr>
+	<tr>
+		<th colspan="3">
+			<p style="text-align:justify;">
+				<font size=1>
+		If you want to control the entire structure of the data, this method is convenant
+				</font>
+			</b>
+		</th>
+	</tr>
+	</table>
+  </div>
+</div>
+
+</body>
+</html>
